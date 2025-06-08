@@ -31,3 +31,7 @@
 ---
 
 📌 Make sure `geometria.json` is in the correct directory before running the scripts.
+
+---
+
+🧩 The final output model will appear as `output_model.stl` in the same directory.
