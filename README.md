@@ -1,37 +1,45 @@
-## Instructions for Extracting Geometry from Binkies3D
+# Extracting 3D Geometry from Binkies3D
 
-1. **Create a Live 3D Project**  
-   Go to [studio.binkies3d.com](https://studio.binkies3d.com) and create a **Live 3D project** with the model you want to retrieve.
+Follow these steps to extract a 3D model from a Live 3D project on studio.binkies3d.com.
 
-2. **Open the Embed Page**  
-   Navigate to the **embed page** of the project.
+## Steps
 
-3. **Modify JavaScript**  
-   Locate and **overwrite** the script file:  
-   `842.live3d-player.js`
+1. **Create Project**
+   - Go to [studio.binkies3d.com](https://studio.binkies3d.com).
+   - Create a *Live 3D project* with the desired model.
 
-   Inside this script, **log the value of variable `l` to the console** at the moment it's assigned the result of `e(s, i)`.  
-   Example modification:
-   ```javascript
-   l = e(s, i);
-   console.log(l);
-   ```
+2. **Access Embed Page**
+   - Open the project's *Embed* page.
 
-4. **Save JSON Output**  
-   Open the browser console, **copy the printed JSON**, and **save it to a file** named:  
-   `geometria.json`
+3. **Edit JavaScript**
+   - Locate the file: `842.live3d-player.js`.
+   - Find where `l = e(s, i)` is defined and insert:
+     ```javascript
+     console.log(l);
+     ```
+   - This logs the geometry JSON to the browser console.
 
-5. **Run Python Scripts**  
-   In the following order, execute the Python scripts:
-   ```bash
-   python3 FILTRUJ.py
-   python3 GEOMETRUJ.py
-   ```
+4. **Export Geometry**
+   - Copy the logged JSON from the console.
+   - Save it as `geometria.json` in your working directory.
+
+5. **Run Conversion Scripts**
+   - In terminal, run:
+     ```bash
+     python3 FILTRUJ.py
+     python3 GEOMETRUJ.py
+     ```
+
+## Output
+
+The final model will be saved as:
+
+```
+output_model.stl
+```
+
+in the same directory.
 
 ---
 
-📌 Make sure `geometria.json` is in the correct directory before running the scripts.
-
----
-
-🧩 The final output model will appear as `output_model.stl` in the same directory.
+Ensure all scripts and `geometria.json` are in the same folder before starting.
