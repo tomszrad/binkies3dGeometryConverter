@@ -23,7 +23,14 @@ Follow these steps to extract a 3D model from a Live 3D project on studio.binkie
    - Copy the logged JSON from the console.
    - Save it as `geometria.json` in your working directory.
 
-5. **Run Conversion Scripts**
+5. **Install Dependencies**
+   - Make sure you have Python 3 and pip installed.
+   - Install required packages:
+     ```bash
+     pip install numpy numpy-stl
+     ```
+
+6. **Run Conversion Scripts**
    - In terminal, run:
      ```bash
      python3 FILTR.py
@@ -31,7 +38,6 @@ Follow these steps to extract a 3D model from a Live 3D project on studio.binkie
      ```
 
 ## Output
-
 The final model will be saved as:
 
 ```
