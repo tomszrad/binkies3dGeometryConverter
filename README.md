@@ -26,7 +26,7 @@ Follow these steps to extract a 3D model from a Live 3D project on studio.binkie
 5. **Run Conversion Scripts**
    - In terminal, run:
      ```bash
-     python3 FILTRUJ.py
+     python3 FILTR.py
      python3 GEOMETRUJ.py
      ```
 
