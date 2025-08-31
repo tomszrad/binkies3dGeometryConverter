@@ -11,16 +11,23 @@ Follow these steps to extract a 3D model from a Live 3D project on studio.binkie
 2. **Access Embed Page**
    - Open the project's *Embed* page.
 
-3. **Edit JavaScript**
-   - Locate the file: `842.live3d-player.js`.
-   - Find where `l = e(s, i)` is defined and insert:
-     ```javascript
-     console.log(l);
-     ```
-   - This logs the geometry JSON to the browser console.
+3. **Override JavaScript in Browser**
+   - Open the page in Chrome/Chromium.
+   - Press **F12** to open *Developer Tools*.
+   - Go to the **Sources** tab.
+   - Locate the file `842.live3d-player.js` (it will load from the page).
+   - Use the *Local Overrides* feature to replace its content:
+     1. In **Sources → Overrides**, pick a local folder to store overrides.
+     2. Right-click on `842.live3d-player.js` and choose **Save for overrides**.
+     3. Find the line where `l = e(s, i)` is defined and insert:
+        ```javascript
+        console.log(l);
+        ```
+   - Reload the page. Now the geometry JSON will be printed in the browser console.
 
 4. **Export Geometry**
-   - Copy the logged JSON from the console.
+   - Open the *Console* tab.
+   - Copy the logged JSON.
    - Save it as `geometria.json` in your working directory.
 
 5. **Install Dependencies**
