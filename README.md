@@ -15,10 +15,10 @@ Follow these steps to extract a 3D model from a Live 3D project on studio.binkie
    - Open the page in Chrome/Chromium.
    - Press **F12** to open *Developer Tools*.
    - Go to the **Sources** tab.
-   - Locate the file `842.live3d-player.js` (it will load from the page).
+   - Locate the file `225.live3d-player.js` (it will load from the page).
    - Enable *Local Overrides*:
      1. In **Sources → Overrides**, pick a local folder to store overrides.
-     2. Right-click on `842.live3d-player.js` and choose **Save for overrides**.
+     2. Right-click on `225.live3d-player.js` and choose **Save for overrides**.
    - Open the overridden script in the editor.  
      Use **Ctrl+F** in the editor to search for:
      ```
