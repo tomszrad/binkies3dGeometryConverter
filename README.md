@@ -28,6 +28,12 @@ Follow these steps to extract a 3D model from a Live 3D project on studio.binkie
      ```javascript
      console.log(l);
      ```
+     *or*
+     ```javascript
+                         window.__l3dGeometry = l, window.__l3dTextures = l.textures, window.__l3dTextureUrls = l.textures.map((e)=>`${c}/7/${e.path}`),
+                    console.log(l), console.log("textures", l.textures), console.log("textureUrls", window.__l3dTextureUrls),
+     ```
+     If you need textures.
    - Reload the page. Now the geometry JSON will be printed in the browser console.
 
 4. **Export Geometry**
