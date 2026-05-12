@@ -24,7 +24,8 @@ Follow these steps to extract a 3D model from a Live 3D project on studio.binkie
      ```javascript
      console.log(l);
      ```
-   - Reload the page. Now the geometry JSON will be printed in the browser console.
+   - Reload the page. 
+   - **Note:** The page will stop functioning and an error will appear in the console. This is expected behavior – the console log will still work despite the crash.
 
 4. **Export Geometry**
    - Open the *Console* tab.
@@ -41,7 +42,7 @@ Follow these steps to extract a 3D model from a Live 3D project on studio.binkie
 6. **Run Conversion Scripts**
    - In terminal, run:
      ```bash
-     python3 filtr.py && python3 convert.py
+      python3 filtr.py && python3 convert.py
      ```
 
 ## Output
