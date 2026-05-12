@@ -15,16 +15,12 @@ Follow these steps to extract a 3D model from a Live 3D project on studio.binkie
    - Open the page in Chrome/Chromium.
    - Press **F12** to open *Developer Tools*.
    - Go to the **Sources** tab.
-   - Locate the file `225.live3d-player.js` (it will load from the page).
-   - Enable *Local Overrides*:
+   - In the **Sources** tab, there are several JS scripts named `[number].live3d-player.js`. Using the text search (**Ctrl+F**), locate the one that contains the phrase `l = e(s, i)`.
+   - Enable *Local Overrides* for this specific file:
      1. In **Sources → Overrides**, pick a local folder to store overrides.
-     2. Right-click on `225.live3d-player.js` and choose **Save for overrides**.
+     2. Right-click on the identified `[number].live3d-player.js` file and choose **Save for overrides**.
    - Open the overridden script in the editor.  
-     Use **Ctrl+F** in the editor to search for:
-     ```
-     l = e(s, i)
-     ```
-   - When you find it, insert a line just after it:
+   - Just below the `l = e(s, i)` line in the identified file, insert the following line:
      ```javascript
      console.log(l);
      ```
@@ -45,13 +41,13 @@ Follow these steps to extract a 3D model from a Live 3D project on studio.binkie
 6. **Run Conversion Scripts**
    - In terminal, run:
      ```bash
-      python3 filtr.py && python3 convert.py
+     python3 filtr.py && python3 convert.py
      ```
 
 ## Output
 The final model will be saved as:
 
-```
+```text
 output_model.stl
 ```
 
